@@ -26,7 +26,7 @@ function BookForm({ obj }) {
     getAuthors(user.uid).then(setAuthors);
 
     if (obj.firebaseKey) setFormInput(obj);
-  }, [obj, user]);
+  }, [obj, user]); // This is a dependancy array
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -96,7 +96,7 @@ function BookForm({ obj }) {
           name="author_id"
           onChange={handleChange}
           className="mb-3"
-          value={obj.author_id} // FIXME: modify code to remove error
+          value={formInput.author_id} // FIXME: modify code to remove error
           required
         >
           <option value="">Select an Author</option>
