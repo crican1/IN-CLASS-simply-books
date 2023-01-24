@@ -23,7 +23,9 @@ export default function ViewAuthor() {
   return (
     <div className="mt-5 d-flex flex-wrap">
       <div className="d-flex flex-column">
-        <img src={authorDetails.image} alt={authorDetails.title} style={{ width: '300px' }} />
+        {// eslint-disable-next-line @next/next/no-img-element
+          <img src={authorDetails.image} alt={authorDetails.title} style={{ width: '300px' }} />
+        }
       </div>
       <div className="text-white ms-5 details">
         <h5>
